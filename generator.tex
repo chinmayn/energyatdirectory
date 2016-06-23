@@ -1,0 +1,40 @@
+\documentclass{beamer}
+\usepackage{pgffor}
+\usetheme[height=14mm]{Rochester} % My favorite!
+\definecolor{Blue}{RGB}{83,121,170}
+\definecolor{Green}{RGB}{83,170,121}
+\definecolor{Red}{RGB}{170,121,83}
+\definecolor{Yellow}{RGB}{255,193,37}
+\definecolor{Purple}{RGB}{160,32,240}
+\definecolor{Grey}{RGB}{84,84,84}
+\definecolor{Cardinal}{RGB}{140,21,21}
+\setbeamercolor{footlinecolor}{fg=white,bg=Blue}
+\setbeamerfont{footline}{size=\fontsize{20}{20}\selectfont}
+\setbeamerfont{frametitle}{size=\fontsize{20}{20}}
+\usecolortheme{default}
+\setbeamerfont{author}{size=\medium}
+% To remove the navigation symbols from
+% the bottom of slides%
+\setbeamertemplate{navigation symbols}{}
+\usepackage{graphicx}
+%\setbeamertemplate{itemize items}{$\cdot$}
+
+\renewcommand{\footnotesize}{\scriptsize}
+\setbeamertemplate{frametitle}[default][center]
+\addtobeamertemplate{frametitle}{\vspace{-1.6\baselineskip}}
+
+\setbeamertemplate{footline}{%
+ 
+  \begin{beamercolorbox}[sep=0.75em,wd=\paperwidth,ht=1.35cm,leftskip=0.5cm,rightskip=0.5cm]{footlinecolor}
+   \parbox{\linewidth}{\centering Earth}
+  \end{beamercolorbox}%}
+}
+\addtobeamertemplate{footline}{\vspace{-0.2\baselineskip}}
+
+
+\begin{document}
+\graphicspath{{./img/}}
+foreach \n in {1} {\input{./tex/student\n}}
+
+
+\end{document}
