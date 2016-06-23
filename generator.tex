@@ -1,3 +1,5 @@
+%This is a PDF Generator for the directory. It uses the Beamer Class (https://www.ctan.org/tex-archive/macros/latex/contrib/beamer?lang=en)
+
 \documentclass{beamer}
 \usepackage{pgffor}
 \usetheme[height=14mm]{Rochester} % My favorite!
@@ -31,7 +33,7 @@
 }
 \addtobeamertemplate{footline}{\vspace{-0.2\baselineskip}}
 
-
+%The following lines combine all the images in the ./img directory and all .tex files in the ./tex directory into one single file. Just change the number {1} below to the number of files/students in your directory
 \begin{document}
 \graphicspath{{./img/}}
 foreach \n in {1} {\input{./tex/student\n}}
